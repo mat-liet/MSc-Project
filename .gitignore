@@ -1,0 +1,16 @@
+# Ignore all output pcap files
+*.pcap
+
+#Ignore target folder
+/mainPcap/target/
+
+# Ignore .vscode settings
+/mainPcap/.vscode
+/.vscode
+
+#Ignore all vim generated files
+*.swp
+*.swo
+
+#Ignore output file
+/mainPcap/output.txt

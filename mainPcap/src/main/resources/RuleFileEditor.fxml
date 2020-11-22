@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.detectionSystem.gui.controllers.RuleFileEditorController">
+   <children>
+      <TextArea fx:id="ruleFileText" layoutX="15.0" layoutY="22.0" prefHeight="306.0" prefWidth="571.0" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="22.0" />
+      <HBox layoutX="238.0" layoutY="347.0" prefHeight="26.0" prefWidth="124.0" AnchorPane.bottomAnchor="27.0">
+         <children>
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveChanges" prefHeight="25.0" prefWidth="60.0" text="Save" />
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelScreen" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

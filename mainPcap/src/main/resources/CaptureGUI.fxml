@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.detectionSystem.gui.controllers.CaptureController">
+  <tabs>
+    <Tab text="Capture">
+         <content>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="181.0" layoutY="14.0" text="Welcome to the capture module!" />
+                  <Label layoutX="122.0" layoutY="46.0" text="You are capturing using device:" />
+                  <Label fx:id="deviceName" layoutX="350.0" layoutY="46.0" prefHeight="15.0" prefWidth="184.0" text="device" />
+                  <Button fx:id="startButton" layoutX="257.0" layoutY="151.0" mnemonicParsing="false" onAction="#startCapture" prefHeight="58.0" prefWidth="84.0" text="Start" />
+                  <Button fx:id="stopButton" layoutX="257.0" layoutY="256.0" mnemonicParsing="false" onAction="#stopCapture" prefHeight="58.0" prefWidth="84.0" text="Stop" />
+                  <Label fx:id="sizeOfQueueTitle" layoutX="92.0" layoutY="336.0" text="Size of inspection queue:" />
+                  <Label fx:id="sizeOfQueueValue" layoutX="281.0" layoutY="336.0" prefHeight="15.0" prefWidth="85.0" text="Label" />
+                  <Label layoutX="92.0" layoutY="368.0" text="Total packets inspected:" />
+                  <Label fx:id="totalPacketsInspected" layoutX="281.0" layoutY="368.0" prefHeight="15.0" prefWidth="85.0" text="Label" />
+               </children>
+            </Pane>
+         </content></Tab>
+    <Tab text="Packets">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="filterButton" layoutX="444.0" layoutY="14.0" mnemonicParsing="false" onAction="#getFilteredResults" text="Filter" />
+                  <TextField fx:id="filterValue" layoutX="252.0" layoutY="14.0" promptText="Filter value here..." />
+                  <ChoiceBox fx:id="filterChoiceBox" layoutX="162.0" layoutY="14.0" prefHeight="25.0" prefWidth="60.0" />
+                  <Label layoutX="83.0" layoutY="19.0" text="Filter by:" />
+                  <ListView fx:id="unseenPacketList" layoutX="14.0" layoutY="73.0" prefHeight="245.0" prefWidth="568.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="73.0" />
+                  <HBox layoutX="114.0" layoutY="345.0" prefHeight="36.0" prefWidth="368.0" AnchorPane.bottomAnchor="37.0">
+                     <children>
+                        <Button fx:id="viewAll" mnemonicParsing="false" onAction="#viewAll" prefHeight="48.0" prefWidth="127.0" text="View all" />
+                        <Button fx:id="viewInformation" mnemonicParsing="false" onAction="#viewInformationOfPacket" prefHeight="36.0" prefWidth="152.0" text="View information" />
+                        <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeListItem" prefHeight="36.0" prefWidth="118.0" text="Remove" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </content></Tab>
+      <Tab text="Settings">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Pane layoutY="-9.0" prefHeight="421.0" prefWidth="600.0">
+                     <children>
+                        <VBox layoutX="221.0" layoutY="126.0" prefHeight="51.0" prefWidth="159.0">
+                           <children>
+                              <Button fx:id="editRuleFileButton" mnemonicParsing="false" onAction="#editRuleFile" prefHeight="47.0" prefWidth="162.0" text="Edit rule file" />
+                           </children>
+                        </VBox>
+                        <Label layoutX="88.0" layoutY="92.0" text="Warning: Must restart capture in order for changes to take place." underline="true" />
+                        <Button fx:id="editRuleFilePath" layoutX="219.0" layoutY="227.0" mnemonicParsing="false" onAction="#editRuleFilePath" prefHeight="47.0" prefWidth="162.0" text="Change rule file path" />
+                        <Label layoutX="88.0" layoutY="203.0" text="Rule path:" underline="true" />
+                        <Label fx:id="rulePathLabel" layoutX="166.0" layoutY="203.0" prefHeight="15.0" prefWidth="376.0" text="texthere" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Stats">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="48.0" text="Top five snort rules triggered:" underline="true" />
+                  <BarChart fx:id="topSnortTrig" layoutX="103.0" layoutY="72.0" prefHeight="206.0" prefWidth="377.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                  <Label layoutX="14.0" layoutY="299.0" text="Time of last potential attack:" underline="true" />
+                  <Label fx:id="timeOfLastAttack" layoutX="231.0" layoutY="299.0" prefHeight="15.0" prefWidth="216.0" text="Label" />
+                  <Label layoutX="14.0" layoutY="347.0" text="Number of total packets captured:" underline="true" />
+                  <Label fx:id="totalPacketsCaptured" layoutX="264.0" layoutY="347.0" prefHeight="15.0" prefWidth="216.0" text="Label" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

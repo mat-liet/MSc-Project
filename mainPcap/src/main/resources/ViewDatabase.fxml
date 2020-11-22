@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.detectionSystem.gui.controllers.ViewDatabaseController">
+   <children>
+      <TableView fx:id="packetTable" layoutX="16.0" layoutY="58.0" prefHeight="317.0" prefWidth="569.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="58.0">
+        <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY" /></columnResizePolicy> 
+        <columns>
+            <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="packetIdCol" prefWidth="93.0" text="Packet Id" />
+            <TableColumn fx:id="timeStampCol" prefWidth="147.0" text="Timestamp" />
+            <TableColumn fx:id="messageCol" prefWidth="114.0" text="MSG" />
+            <TableColumn fx:id="packetCol" prefWidth="139.0" text="Packet" />
+            <TableColumn fx:id="seenCol" prefWidth="139.0" text="Seen" />
+         </columns>
+      </TableView>
+      <ChoiceBox fx:id="tableChoiceBox" layoutX="16.0" layoutY="14.0" prefWidth="150.0" />
+      <Button fx:id="refreshButton" layoutX="474.0" layoutY="14.0" mnemonicParsing="false" onAction="#refreshTable" prefHeight="25.0" prefWidth="111.0" text="Refresh" AnchorPane.rightAnchor="15.0" />
+      <Button fx:id="saveChanges" layoutX="345.0" layoutY="14.0" mnemonicParsing="false" onAction="#saveChanges" prefHeight="25.0" prefWidth="111.0" text="Save changes" />
+   </children>
+</AnchorPane>

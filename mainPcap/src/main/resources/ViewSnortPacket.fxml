@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="423.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.detectionSystem.gui.controllers.ViewSnortPacketController">
+   <children>
+    <Label layoutX="41.0" layoutY="44.0" text="SID:" />
+      <Label layoutX="41.0" layoutY="76.0" text="ID in table:" />
+      <Label layoutX="40.0" layoutY="113.0" text="Packet ID:" />
+      <Label layoutX="39.0" layoutY="152.0" text="Time captured:" />
+      <Label layoutX="39.0" layoutY="191.0" text="Message:" />
+      <Label layoutX="39.0" layoutY="231.0" text="Malicious packet: " />
+      <Label fx:id="SID" layoutX="101.0" layoutY="44.0" text="Label" />
+      <Label fx:id="ID" layoutX="132.0" layoutY="76.0" text="Label" />
+      <Label fx:id="packetId" layoutX="120.0" layoutY="113.0" text="Label" />
+      <Label fx:id="timeStamp" layoutX="149.0" layoutY="152.0" text="Label" />
+      <Label fx:id="message" layoutX="111.0" layoutY="192.0" prefWidth="200.0" text="Label" wrapText="true">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+      <TextArea fx:id="packetArea" layoutX="20.0" layoutY="267.0" prefHeight="328.0" prefWidth="381.0" />
+   </children>
+</Pane>

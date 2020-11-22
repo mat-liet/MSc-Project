@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller = "com.detectionSystem.gui.controllers.DeviceListController" >
+   <children>
+      <ListView fx:id="deviceList" layoutX="32.0" layoutY="73.0" prefHeight="238.0" prefWidth="541.0" />
+      <Label layoutX="39.0" layoutY="28.0" text="Choose your device:" />
+      <Button fx:id="confirm" onAction="#selectDevice" layoutX="269.0" layoutY="338.0" mnemonicParsing="false" text="Confirm" />
+   </children>
+</Pane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.detectionSystem.gui.controllers.SelectRuleFileController">
+   <children>
+      <Button fx:id="selectRuleFile" layoutX="132.0" layoutY="440.0" mnemonicParsing="false" onAction="#selectRuleFile" prefHeight="46.0" prefWidth="136.0" text="Select rule file" />
+      <Text layoutX="75.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to your Network Intrusion Detection System!" textAlignment="CENTER" underline="true" wrappingWidth="249.52734375">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="54.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This program is designed to capture network traffic and look out for any traffic that can cause harm to your computer." textAlignment="CENTER" wrappingWidth="291.7294921875" />
+      <Text layoutX="55.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you are unsure about what an element does, you can hover over the element and you will see a tip which briefly describes what it does. You can try this out by hovering over the button below." textAlignment="CENTER" wrappingWidth="291.7294921875" />
+      <Text layoutX="54.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You can start the program by selecting the rule file you would like to use." textAlignment="CENTER" wrappingWidth="291.7294921875" />
+   </children>
+</AnchorPane>
