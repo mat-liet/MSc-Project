@@ -9,3 +9,8 @@ Main objectives are:
 3) Alert and logging system.
 
 Dependencies for Pcap4J library are listed below but can also be found on their github page: https://github.com/kaitoy/pcap4j
+
+The original MSC-Project is available in the mainPcap folder.
+
+I have started to work on a new updated version of the project which adds Spring, Flyway, RabbitMQ, JPA to the project.
+This new version is available in the packet-sniffer folder.
